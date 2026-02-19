@@ -1,0 +1,19 @@
+name: IslandHide
+version: '1.0.0'
+main: net.solryn.islandhide.IslandHide
+api-version: '1.21'
+authors: [crxsto]
+website: net.solryn
+depend: [ProtocolLib]
+softdepend: [WorldGuard]
+description: A comprehensive hiding plugin for Paper servers.
+permissions:
+  islandhide.admin:
+    description: Allows bypassing all restrictions and reloading config
+    default: op
+  islandhide.bypass.commands:
+    description: Bypass command hiding
+    default: op
+  islandhide.bypass.plugins:
+    description: Bypass plugin hiding
+    default: op

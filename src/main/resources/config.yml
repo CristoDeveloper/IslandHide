@@ -1,0 +1,56 @@
+# IslandHide Configuration
+# Author: crxsto (net.solryn)
+# Version: 1.0.0
+
+settings:
+  debug: false
+  prefix: "&8[&bIslandHide&8] "
+  check-updates: true
+
+hiding:
+  commands:
+    enabled: true
+    # Mode can be WHITELIST or BLACKLIST
+    mode: BLACKLIST
+    # Regex is supported
+    list:
+      - "^/plugins"
+      - "^/pl"
+      - "^/bukkit:.*"
+      - "^/minecraft:.*"
+      - "^/version"
+      - "^/about"
+      - "^/icanhasbukkit"
+    # Message to send when a command is blocked. Set to "" to send nothing (or default unknown command message if possible)
+    block-message: "&fUnknown command. Type \"/help\" for help."
+    
+  plugins:
+    enabled: true
+    # Block tab completion for commands that are hidden or plugins
+    block-tab-complete: true
+    # Message when trying to tab complete blocked commands (rarely visible depending on client)
+    block-message: ""
+
+  brand:
+    enabled: true
+    # The brand shown in F3 debug screen (top left)
+    value: "Paper 1.21" 
+    
+  server-list:
+    enabled: true
+    motd: "&bIslandHide Server"
+    # Hide player count or sample
+    hide-players: false
+    # Set to -1 to disable
+    fake-max-players: -1
+
+security:
+  # Block client-side mods that request specific channels (e.g. Wurst, Schematica)
+  anti-mod-detection: true
+  blocked-channels:
+    - "wdl:init"
+    - "schematica:payload"
+    - "bungeecord:main" # Be careful if using BungeeCord
+  
+  # Experimental: Encrypt critical packets (requires heavy testing)
+  packet-encryption: false
