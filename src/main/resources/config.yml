@@ -34,7 +34,7 @@ hiding:
   brand:
     enabled: true
     # The brand shown in F3 debug screen (top left)
-    value: "Paper 1.21" 
+    value: "IslandHide" 
     
   server-list:
     enabled: true
